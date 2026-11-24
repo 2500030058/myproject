@@ -1,0 +1,56 @@
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  /* Creates 3 columns of equal width */
+  grid-template-columns: repeat(3, 1fr); 
+  /* Explicitly defines heights for 3 rows */
+  grid-template-rows: 80px 200px 100px; 
+  gap: 15px; 
+  font-family: sans-serif;
+}
+
+.item {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Line Number Positioning */
+.header-item {
+  /* Starts at column line 1, ends at column line 4 */
+  grid-column: 1 / 4; 
+  grid-row: 1 / 2;
+  background-color: #2c3e50;
+}
+
+.sidebar-item {
+  grid-column: 1 / 2;
+  /* Starts at row line 2, ends at row line 4 */
+  grid-row: 2 / 4; 
+  background-color: #16a085;
+}
+
+.main-item {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.extra-item {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  background-color: #e67e22;
+}
+</Style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item header-item">Header (Spans 1 to 4)</div>
+  <div class="item sidebar-item">Sidebar (Spans Row 2 to 4)</div>
+  <div class="item main-item">Main Content</div>
+  <div class="item extra-item">Extra Card</div>
+</div>
+</body>
+</html>
